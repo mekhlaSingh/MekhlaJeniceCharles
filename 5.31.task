@@ -1,0 +1,11 @@
+import j
+		for(int i = polynomial.thirdTerm; i <= Math.abs(polynomial.thirdTerm); i++){
+			i
+					result.secondTerm = y;
+					result.variable = polynomial.variable;
+					System.out.println(result.printResult());
+					
+				}
+//				
+			}
+		
