@@ -7,7 +7,7 @@ public static void main(String [ ] args ) {
 //create a scanner object
 	
 	Scanner scanner = new Scanner(System.in);
-	
+	//I think you should do this 
 
 	
   //here i will declare the variables 
