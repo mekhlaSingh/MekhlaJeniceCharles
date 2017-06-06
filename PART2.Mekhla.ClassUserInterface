@@ -1,0 +1,72 @@
+package userinterface;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import db.Person;
+
+public class UserInterface {
+	private Scanner scanner;
+	private List<Person> p;
+
+	public void printMenu() {
+		String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;
+		firstName = null;
+		lastName = null;
+		streetAddress = null;
+		emailAddress = null;
+		phoneNumber = null;
+		etcNotes = null;
+		scanner = new Scanner(System.in);
+		int i;
+		p = new ArrayList<Person>();
+		do {
+			System.out.println("(1.) Enter New Person\n(2.) Print Contact List\n(3.) Search By Last Name");
+			i = Integer.parseInt(scanner.nextLine());
+			if (i == 1) {
+				Person person = new Person();
+				System.out.println("Enter first name");
+				firstName = scanner.nextLine();
+				System.out.println("Enter last name");
+				lastName = scanner.nextLine();
+				System.out.println("Enter street Address");
+				streetAddress = scanner.nextLine();
+				System.out.println("Enter email Address");
+				emailAddress = scanner.nextLine();
+				System.out.println("Enter phone Number");
+				phoneNumber = scanner.nextLine();
+				System.out.println("Enter etc Notes");
+				etcNotes = scanner.nextLine();
+				if (lastName.isEmpty()) {
+					System.out.println("Cannot Enter Into Contact List Without Last Name");
+				} else {
+					person.setValuesForPerson(firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes);
+					p.add(person);
+				}
+			}
+			if (i == 2) {
+				for (Person x : p) {
+					x.print();
+				}
+			}
+			if(i == 3){
+				int sizeCheck =0;
+				String lastNameCheck;
+				System.out.println("Enter last name");
+				lastNameCheck = scanner.nextLine();
+				for(Person x : p){
+					if (x.getLastName().equalsIgnoreCase(lastNameCheck)){
+						x.print();
+					}
+					else{
+						sizeCheck++;
+					}
+				}
+				if(sizeCheck == p.size()){
+					System.out.println("Person was unable to be found");
+				}
+			}
+		} while (i != 4);
+	}
+}
