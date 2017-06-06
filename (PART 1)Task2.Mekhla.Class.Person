@@ -1,0 +1,97 @@
+package db;
+
+public class Person {
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;
+
+	public Person() {
+		firstName = null;
+		lastName = null;
+		streetAddress = null;
+		emailAddress = null;
+		phoneNumber = null;
+		etcNotes = null;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		if (firstName.isEmpty()) {
+			this.firstName = "N/A";
+		} else {
+			this.firstName = firstName;
+		}
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getStreetAddress() {
+		return streetAddress;
+	}
+
+	public void setStreetAddress(String streetAddress) {
+		if (streetAddress.isEmpty()) {
+			this.streetAddress = "N/A";
+		} else {
+			this.streetAddress = streetAddress;
+		}
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		if (emailAddress.isEmpty()) {
+			this.emailAddress = "N/A";
+		} else {
+			this.emailAddress = emailAddress;
+		}
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		if (phoneNumber.isEmpty()) {
+			this.phoneNumber = "N/A";
+		} else {
+			this.phoneNumber = phoneNumber;
+		}
+	}
+
+	public String getEtcNotes() {
+		return etcNotes;
+	}
+	public void setValuesForPerson(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String etcNotes){
+		setFirstName(firstName);
+		setLastName(lastName);
+		setStreetAddress(streetAddress);
+		setEmailAddress(emailAddress);
+		setPhoneNumber(phoneNumber);
+		setEtcNotes(etcNotes);
+	}
+	public void setEtcNotes(String etcNotes) {
+		if (etcNotes.isEmpty()) {
+			this.etcNotes = "N/A";
+		} else {
+			this.etcNotes = etcNotes;
+		}
+	}
+
+	public void print() {
+		System.out.printf(
+				"\nFirst Name: %s\tLast Name: %s\nAddress: %s\nEmail Addres: %s\nPhone Number: %s\nNotes: %s\n",
+				firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes);
+	}
+
+}
+
