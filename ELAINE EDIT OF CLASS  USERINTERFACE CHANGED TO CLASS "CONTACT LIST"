@@ -1,0 +1,98 @@
+package userinterface;
+//CHANGE this class name to ContactList
+//one object of this class represents the entire contact list
+//Importing Classes, so we can use it in this class
+//initials: M.S.
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+//initials: M.S.
+//importing person class to UserInterface class
+import db.Person; 
+//we just changed the name from userinterface to contactlist
+public class ContactList {
+	// private variable scanner of type scanner
+	//initials: M.S.
+	private Scanner scanner; //not esential to represent whole contact list
+	// This list will hold objects of class type person
+	//initials: M.S.
+	private ArrayList<Person> contacts; //
+    //make all o
+    //decalre these "temp" variables locally
+
+	public void printMenu() { // prints menu selection
+		//initials: M.S.
+		scanner = new Scanner(System.in);
+
+	}
+
+	// gives user the option of adding a person
+	//initials: M.S.
+	public void userOptionAddPerson() {
+		Person person = new Person();
+
+	}
+
+	// lets user print the contact list
+	//initials: M.S.
+	public void userOptionPrintContactList() {
+		for (Person x : p) {
+
+		}
+	}
+	// lets user search a contact by entering last name
+	//initials: M.S.
+
+	public void userOptionSearchByLastName() {
+		System.out.println("Enter last name");
+
+	}
+
+	public void setContactInfo() {
+		setFirstName();
+
+	}
+
+	// lets user input first name
+	//initials: M.S.
+	public void setFirstName() { 
+		System.out.println("Enter first name");
+
+	}
+
+	// lets user input last name
+	//initials: M.S.
+	public void setLastName() { 
+		System.out.println("Enter last name");
+
+	}
+
+	// lets user input street address
+	//initials: M.S.
+	public void setStreetAddress() {
+		System.out.println("Enter street Address");
+
+	}
+
+	// lets user input email address
+	//initials: M.S.
+	public void setEmailAddress() {
+		System.out.println("Enter email Address");
+
+	}
+
+	// lets user input phone number
+	//initials: M.S.
+	public void setPhoneNumber() {
+		System.out.println("Enter phone Number");
+
+	}
+
+	// lets user enter notes
+	//initials: M.S.
+	public void setEtcNotes() {
+		System.out.println("Enter etc Notes");
+
+	}
+
+}
