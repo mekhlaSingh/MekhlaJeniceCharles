@@ -1,0 +1,25 @@
+/*
+* 
+* This program creates and stores a Contact List.
+ *
+ * @author {Team 4}
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+   /*
+    * Creating a new object. One object of this class represents all data in contactList 
+    * calls print menu to print everything inside contact list
+    */
+    ContactList contactList = new ContactList(); 
+    
+    contactList.printMenu(); //Call to printMenu takes info from contactlist and calls printMenu function
+
+   //* Contact contactInfo = new Contact();
+    
+    
+     }
+}
