@@ -1,0 +1,82 @@
+import java.util.ArrayList;    //initials: M.S.
+
+//importing Contact class to ContactList class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ */
+public class ContactList { 
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> p;      // initials: M.S.
+/*      p.add("Enter a new person");
+	    p.add("Print the contact list");
+	    p.add("Retrieve a person's information by last name");
+	    p.add("Quit the program and save to disk");
+    	p.add("Start the program and open the existing data file on disk");
+*/	
+	/**
+	 * This method prints the Menu (Options) selection [1] Add contact [2] Print [3] Search
+	 */
+	public void printMenu() {  //initials: M.S.	
+	}
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson() {   //initials: M.S.
+	}
+	/**
+	 *  This method prints the contact list
+	 */
+	public void userOptionPrintContactList() {  //initials: M.S.
+/*		for (Person x : p)
+		{
+		}
+*/
+	}
+	/**
+	 * This method will search the ContactList for Contact by last name
+	 */
+	public void userOptionSearchByLastName() {    //initials: M.S.
+//		System.out.println("Enter last name");
+	}
+	public void setContactInfo() {
+//		setFirstName();
+	}
+	/**
+	 *  lets user input first name
+	 */
+	public void setFirstName() {     //initials: M.S.
+//		System.out.println("Enter first name");
+	}
+	/** 
+	* lets user input last name
+	*/
+	public void setLastName() {   	//initials: M.S.
+//		System.out.println("Enter last name");
+	}
+	/** 
+	*lets user input street address
+	*/
+	public void setStreetAddress() {      //initials: M.S.
+//		System.out.println("Enter street Address");
+	}
+	/** 
+    *lets user input email address
+    */
+	public void setEmailAddress() {      //initials: M.S.
+//		System.out.println("Enter email Address");  
+	}
+    /**
+	*lets user input phone number
+	*/
+	public void setPhoneNumber() {   //initials: M.S.
+//		System.out.println("Enter phone Number");
+	}
+	/** 
+	*lets user input notes
+	*/
+	public void setEtcNotes() {    //initials: M.S.
+//		System.out.println("Enter etc Notes");
+	}
+}
