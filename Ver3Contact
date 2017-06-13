@@ -1,0 +1,96 @@
+/**
+ * @author Team 4
+ */
+
+/**
+ * One object of this class represents a single Contact.
+ */
+public class Contact { 
+	
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;
+
+	public Contact(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String etcNotes) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.streetAddress = streetAddress;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
+		this.etcNotes = etcNotes;
+	}
+
+	public Contact() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		if (firstName.isEmpty()) {
+			this.firstName = "N/A";
+		} else {
+			this.firstName = firstName;
+		}
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getStreetAddress() {
+		return streetAddress;
+	}
+
+	public void setStreetAddress(String streetAddress) {
+		if (streetAddress.isEmpty()) {
+			this.streetAddress = "N/A";
+		} else {
+			this.streetAddress = streetAddress;
+		}
+	}
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		if (emailAddress.isEmpty()) {
+			this.emailAddress = "N/A";
+		} else {
+			this.emailAddress = emailAddress;
+		}
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		if (phoneNumber.isEmpty()) {
+			this.phoneNumber = "N/A";
+		} else {
+			this.phoneNumber = phoneNumber;
+		}
+	}
+
+	public String getEtcNotes() {
+		return etcNotes;
+	}
+
+	public void setEtcNotes(String etcNotes) {
+		if (etcNotes.isEmpty()) {
+			this.etcNotes = "N/A";
+		} else {
+			this.etcNotes = etcNotes;
+		}
+	}
+
+	public String toString(){
+		return (firstName + " " + lastName + " " + streetAddress + " " + emailAddress + " " + phoneNumber + " " + etcNotes);
+	}
+}
