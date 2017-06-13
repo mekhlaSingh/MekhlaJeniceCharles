@@ -1,0 +1,40 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author {Team 4}
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ 
+    	/**
+         * Instantiates one new object
+         */
+         ContactList addressBook; //one object of this class represents the entire Contact List
+         addressBook = new ContactList(); // creates an instance of the class ContactList.
+         
+         System.out.println(addressBook.toString()); // Prints Contact List
+         
+         Contact person; //Creates new object in class Contact 
+         person = new Contact("Homer", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         
+         Contact person2 = new Contact("Marge", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         
+         /*
+          * toString() represents a return String from person type Contact
+          */
+         System.out.println(person.toString()); // print Contact person info
+         /*
+          * toString() represents a return String from person2 type Contact
+          */
+         System.out.println(person2.toString()); // print Contact person2 info
+         
+     }
+}
+/************************************RUN COPY & PASTE******************************************************************
+ContactList@1db9742
+Homer Simpson Springfield Simpson@gmail.com (789)1234432 testing
+Marge Simpson Springfield Simpson@gmail.com (789)1234432 testing
+***********************************************************************************************************************/
