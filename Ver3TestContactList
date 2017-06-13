@@ -1,0 +1,36 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author {Team 4}
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ 
+    	/**
+         * Instantiates one new object
+         */
+         ContactList addressBook; //one object of this class represents the entire Contact List
+         addressBook = new ContactList(); // creates an instance of the class ContactList.
+         System.out.println(addressBook.toString());
+         Contact person; 
+         person = new Contact("Homer", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         Contact person2 = new Contact("Marge", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         
+         /*
+          * toString() represents a return String from person type Contact
+          */
+         System.out.println(person.toString()); //calls toString implicitly 
+         /*
+          * toString() represents a return String from person2 type Contact
+          */
+         System.out.println(person2.toString()); //calls toString implicity 
+         
+/*         boolean contactWasAdded;  //declaration
+         contactWasAdded = addressBook.addContact(person);   //tells us whether the contact was added or not
+         System.out.println(contactWasAdded); 	
+*/
+     }
+}
