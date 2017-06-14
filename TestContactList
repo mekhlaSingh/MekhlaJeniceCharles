@@ -1,0 +1,128 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author {Team 4}
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ 
+    	/**
+         * Instantiates one new object
+         */
+         ContactList addressBook; //one object of this class represents the entire Contact List
+         addressBook = new ContactList(); // creates an instance of the class ContactList.
+         
+         System.out.println(addressBook.toString()); // Prints Contact List
+         addressBook.userOptionAddPerson();
+         addressBook.userOptionPrintContactList();
+         addressBook.userOptionSearchByLastName();
+         addressBook.readContactInfo();
+         addressBook.readFirstName();
+         addressBook.readLastName();
+         addressBook.readStreetAddress();
+         addressBook.readEmailAddress();
+         addressBook.readPhoneNumber();
+         addressBook.readEtcNotes();
+         
+         Contact person; //Creates new object in class Contact 
+         person = new Contact("Homer", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         
+         person.getFirstName();
+         person.getLastName();
+         person.getStreetAddress();
+         person.getEmailAddress();
+         person.getPhoneNumber();
+         person.getEtcNotes();
+         person.toString();
+        
+         
+         
+         
+         Contact person2 = new Contact("Marge", "Simpson","Springfield","Simpson@gmail.com","(789)1234432","testing" ); 
+         
+         person.
+         /*
+          * toString() represents a return String from person type Contact
+          */
+         System.out.println(person.toString()); // print Contact person info
+         /*
+          * toString() represents a return String from person2 type Contact
+          */
+         System.out.println(person2.toString()); // print Contact person2 info
+         
+     	/**
+     	 * This method prints the Menu (Options) selection [1] Add contact [2] Print [3] Search
+     	 */
+         public void printMenu() {      //initials: M.S.
+        	 	 
+         }  
+    /**
+     * This method allows the user to enter a new contact
+     */   		
+		public void userOptionAddPerson() {   //initials: M.S.
+		}
+		/**
+		 *  This method prints the contact list
+		 */
+		public void userOptionPrintContactList() {  //initials: M.S.
+		}
+		/**
+		 * This method will search the ContactList for Contact by last name
+		 */
+		public void userOptionSearchByLastName() {    //initials: M.S.
+//			System.out.println("Enter last name");
+		}
+		/**
+		 * //this method calls the readcontactinfo 
+		 */
+		public void readContactInfo() { 
+		}
+		/**
+		 * Calls method readfirstname from class contact list
+		 * @return 
+		 */
+		string.addressBook.readFirstName() {     //initials: M.S.
+			return 0;
+//			System.out.println("Enter first name");
+		}
+		/** 
+		* lets user input last name
+		*/
+		public void readLastName() {   	//initials: M.S.
+//			System.out.println("Enter last name");
+		}
+		/** 
+		*lets user input street address
+		*/
+		public void readStreetAddress() {      //initials: M.S.
+//			System.out.println("Enter street Address");
+		}
+		/** 
+	    *lets user input email address
+	    */
+		public void readEmailAddress() {      //initials: M.S.
+//			System.out.println("Enter email Address");  
+		}
+	    /**
+		*lets user input phone number
+		*/
+		public void readPhoneNumber() {   //initials: M.S.
+//			System.out.println("Enter phone Number");
+		}
+		/** 
+		*lets user input notes
+		*/
+		public void readEtcNotes() {    //initials: M.S.
+//			System.out.println("Enter etc Notes");
+		}
+	}	
+	}
+}
+/************************************RUN COPY & PASTE******************************************************************
+ContactList@1db9742
+Homer Simpson Springfield Simpson@gmail.com (789)1234432 testing
+Marge Simpson Springfield Simpson@gmail.com (789)1234432 testing
+***********************************************************************************************************************/
