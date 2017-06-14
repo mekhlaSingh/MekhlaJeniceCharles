@@ -1,1 +1,132 @@
+/**
+ * @author Team 4
+ */
+
+/**
+ * One object of this class represents a single Contact.
+ */
+public class Contact { 
+	
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;   //M.S.
+	
+	/*
+	 * Constructs a new Contact with String parameter
+	 */
+	public Contact(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String etcNotes) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.streetAddress = streetAddress;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
+		this.etcNotes = etcNotes;
+	}
+/**
+   Constructs a new Contact with an empty parameter
+
+	public Contact() {
+*/
+	//}
+    /**
+     * This method will retrieve firstName input from user
+     */
+	public String getFirstName() {
+		return this.firstName;
+	}
+    /**
+     * This method will set firstName based on input from user
+     */
+	public void setFirstName(String firstName) {
+/*		if (firstName.isEmpty()) {
+			this.firstName = "N/A";
+		} else {
+*/		
+//           this.firstName = firstName;
+		}
+
+	/**
+	 * This method will retrieve lastName input from user
+	 */
+	public String getLastName() {
+		return this.lastName;
+	}
+    /**
+     * This method will set lastName based on input from user
+     */
+	public void setLastName(String lastName) {
+//		this.lastName = lastName;
+	}
+    /**
+     * This method will retrieve streetAddress input from user
+     */
+	public String getStreetAddress() {
+		return this.streetAddress;
+	}
+    /**
+     * This method will set streetAddress based on input from user
+     */
+	public void setStreetAddress(String streetAddress) {
+/*		if (streetAddress.isEmpty()) {
+			this.streetAddress = "N/A";
+		} else {
+			this.streetAddress = streetAddress;
+*/
+		}
+    /**
+     * This method will retrieve getEmailAddress input from user
+     */
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+    /**
+     * This method will set emailAddress based on input from user  
+     */
+	public void setEmailAddress(String emailAddress) {
+/*		if (emailAddress.isEmpty()) {
+			this.emailAddress = "N/A";
+		} else {
+			this.emailAddress = emailAddress;
+		}
+*/
+	}
+    /**
+     * This method will retrieve phoneNumber input from user
+     */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+    /** 
+     * This method will set phoneNumber based on input from user
+     */
+	public void setPhoneNumber(String phoneNumber) {
+/*		if (phoneNumber.isEmpty()) {
+			this.phoneNumber = "N/A";
+		} else {
+			this.phoneNumber = phoneNumber;
+		}
+*/		
+	}
+    /**
+     * This method will retrieve etcNotes input from user
+     */
+	public String getEtcNotes() {
+		return etcNotes;
+	}
+    /**
+     * This method will set etcNotes based on input from user
+     */
+	public void setEtcNotes(String etcNotes) {
+/*		if (etcNotes.isEmpty()) {
+			this.etcNotes = "N/A";
+		} else {
+			this.etcNotes = etcNotes;
+		}
+*/
+	}
+	/**
+	 * This method returns String with users variables input
+	 */
+	public String toString(){
+		return (firstName + " " + lastName + " " + streetAddress + " " + emailAddress + " " + phoneNumber + " " + etcNotes);
+	}
+}
 
