@@ -1,0 +1,84 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author {Team 4}
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ 
+    	/**
+         * Instantiates one new object
+         */
+        ContactList addressBook; //one object of this class represents the entire Contact List //CP
+        addressBook = new ContactList(); // creates an instance of the class ContactList.
+         
+        addressBook.userOptionAddPerson();      //method call to add contact, //initials: M.S. 
+        addressBook.userOptionPrintContactList(); //method prints contact list //initials: M.S.
+        addressBook.userOptionSearchByLastName(); //This method will search the ContactList for Contact by last name //initials: M.S.
+        addressBook.readContactInfo();  //method call to read contact info //initials: M.S.
+        addressBook.readFirstName();    //method call to read first name from class contact list //initials: M.S.
+        addressBook.readLastName();      //lets user input last name       //initials: M.S.
+        addressBook.readStreetAddress(); // lets user input street address     //initials: M.S.
+        addressBook.readEmailAddress();  // lets user input email Address   //initials: M.S.
+        addressBook.readPhoneNumber();   // lets user input phone number //initials: M.S.
+        addressBook.readEtcNotes();      // lets user input Etc Notes  //initials: M.S.
+        System.out.println(addressBook.toString()); // Prints Contact List //initials: C.P.
+         
+        /**
+         * Creates new object in class Contact that represents one Contact info 
+         */
+        Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","etcNotesPerson1" ); 
+         
+        /**
+         * Get and Set methods are both related to how variables are passed between classes. The whole point of get() and set() is to receive the
+         * data and then store it. 
+         */
+        person.getFirstName(); // get method call to retrieve input of firstName from user
+        person.getLastName();  // get method call to retrieve input of lastName from user
+        person.getStreetAddress(); //get method call to retrieve input of streetAddssress from user
+        person.getEmailAddress(); // get method call to retrieve input of email address from user
+        person.getPhoneNumber(); //get method call to retrieve input of phone numbers from user
+        person.getEtcNotes();    //get method call to retrieve input of etcNotes from user
+         
+        person.setFirstName(); //set method call to store the FirstName variable
+        person.setLastName();  //set method call to store the LastName variable
+        person.setStreetAddress(); //set method call to store StreetAddress variable
+        person.setEmailAddress(); //set method call to store Email Address variable
+        person.setPhoneNumber(); //set method call to store PhoneNumber 
+        person.setEtcNotes();    //set method call to store etcNotes 
+        
+        /**
+         * toString() represents a return String from person type Contact
+         */
+        System.out.println(person.toString()); // print Contact person info
+        
+        
+
+        TestContactList userOptions = new TestContactList(); 
+        /**
+     	 * This method prints the Menu (Options) selection [1] Add contact [2] Print [3] Search
+     	 */
+        TestContactList.printMenu();    {  //call to printMenu method to display choice Options for user       //initials: M.S,C.P	 	 
+        }
+    }
+         
+     	private static void printMenu() {  //this method displays Menu Options Selections to user [1] Add contact [2] Print [3] Search
+     		
+     	}
+    }
+
+		
+ 
+
+/************************************RUN COPY & PASTE******************************************************************
+<Contact List Print Test>
+firstNamePerson1 lastNamePerson1
+streetAddressPerson1
+emailPerson1
+phoneNumberPerson1
+etcNotesPerson1
+
+***********************************************************************************************************************/
