@@ -59,13 +59,13 @@ public class TestContactList {
 
         TestContactList userOptions = new TestContactList(); 
         /**
-     	 * This method prints the Menu (Options) selection [1] Add contact [2] Print [3] Search
+     	 * This method prints the Menu (Options) selection [1] Enter New Person [2] Print Contact List [3] Search By Last Name [4] Quit //Initials J.W.
      	 */
         TestContactList.printMenu();    {  //call to printMenu method to display choice Options for user       //initials: M.S,C.P	 	 
         }
     }
          
-     	private static void printMenu() {  //this method displays Menu Options Selections to user [1] Add contact [2] Print [3] Search
+     	private static void printMenu() {  //this method displays Menu Options Selections to user [1] Add contact [2] Print [3] Search By Last Name [4] Quit
      		
      	}
     }
