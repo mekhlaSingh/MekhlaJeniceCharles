@@ -34,7 +34,7 @@ public class ContactList {
 //		System.out.println("Enter last name");
 	}
 	/**
-	 * //this method creates a new object of class Contact, gets the data from user  and stores the contact into the list.
+	 * //this method creates a new object of class Contact, gets the data from user and stores the contact into the list.
 	 */
 	public void readContactInfo() { 
 	}
@@ -73,7 +73,7 @@ public class ContactList {
 	*lets user input notes
 	*/
 	public void readEtcNotes() {    //initials: M.S.
-//		System.out.println("Enter etc Notes")
+//		System.out.println("Enter Notes")    //initials J.W.
 	}
 	public String toString() { //need to define for loop to print Contact List //CP
 		return "<Contact List Print Test>";
