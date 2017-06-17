@@ -8,18 +8,18 @@
 public class Contact { 
 	
 	
-	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;   //M.S.
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, Notes;   //initials M.S.,J.W.
 	
 	/*
 	 * Constructs a new Contact with String parameter
 	 */
-	public Contact(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String etcNotes) { 
+	public Contact(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String Notes) { 
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.streetAddress = streetAddress;
 		this.emailAddress = emailAddress;
 		this.phoneNumber = phoneNumber;
-		this.etcNotes = etcNotes;
+		this.etcNotes = Notes;    //initials J.W.
 	}
 /**
    Constructs a new Contact with an empty parameter
@@ -107,19 +107,19 @@ public class Contact {
 */		
 	}
     /**
-     * This method will retrieve etcNotes input from user
+     * This method will retrieve Notes input from user
      */
-	public String getEtcNotes() {
-		return etcNotes;
+	public String getNotes() {
+		return Notes;
 	}
     /**
      * This method will set etcNotes based on input from user
      */
-	public void setEtcNotes() {  //took out String etcNotes parameters
-/*		if (etcNotes.isEmpty()) {
-			this.etcNotes = "N/A";
+	public void setNotes() {  //took out String Notes parameters
+/*		if (Notes.isEmpty()) {
+			this.Notes = "N/A";
 		} else {
-			this.etcNotes = etcNotes;
+			this.Notes = Notes;  //initials J.W. edit
 		}
 */
 	}
@@ -127,6 +127,6 @@ public class Contact {
 	 * This method returns String with users variables input
 	 */
 	public String toString(){
-		return (firstName + " " + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + etcNotes);
+		return (firstName + " " + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + Notes);
 	}
 }
