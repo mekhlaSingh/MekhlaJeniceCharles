@@ -24,13 +24,13 @@ public class TestContactList {
         addressBook.readStreetAddress(); // lets user input street address     //initials: M.S.
         addressBook.readEmailAddress();  // lets user input email Address   //initials: M.S.
         addressBook.readPhoneNumber();   // lets user input phone number //initials: M.S.
-        addressBook.readEtcNotes();      // lets user input Etc Notes  //initials: M.S.
+        addressBook.readNotes();      // lets user input Notes  //initials: J.W.
         System.out.println(addressBook.toString()); // Prints Contact List //initials: C.P.
          
         /**
          * Creates new object in class Contact that represents one Contact info 
          */
-        Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","etcNotesPerson1" ); 
+        Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","NotesPerson1" ); 
          
         /**
          * Get and Set methods are both related to how variables are passed between classes. The whole point of get() and set() is to receive the
@@ -41,14 +41,14 @@ public class TestContactList {
         person.getStreetAddress(); //get method call to retrieve input of streetAddssress from user
         person.getEmailAddress(); // get method call to retrieve input of email address from user
         person.getPhoneNumber(); //get method call to retrieve input of phone numbers from user
-        person.getEtcNotes();    //get method call to retrieve input of etcNotes from user
+        person.getNotes();    //get method call to retrieve input of Notes from user //initials J.W.
          
         person.setFirstName(); //set method call to store the FirstName variable
         person.setLastName();  //set method call to store the LastName variable
         person.setStreetAddress(); //set method call to store StreetAddress variable
-        person.setEmailAddress(); //set method call to store Email Address variable
+        person.setEmailAddress(); //set method call to store EmailAddress variable
         person.setPhoneNumber(); //set method call to store PhoneNumber 
-        person.setEtcNotes();    //set method call to store etcNotes 
+        person.setNotes();    //set method call to store Notes //initials J.W.
         
         /**
          * toString() represents a return String from person type Contact
@@ -79,6 +79,6 @@ firstNamePerson1 lastNamePerson1
 streetAddressPerson1
 emailPerson1
 phoneNumberPerson1
-etcNotesPerson1
+NotesPerson1
 
 ***********************************************************************************************************************/
