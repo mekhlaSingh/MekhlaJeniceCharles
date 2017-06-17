@@ -8,12 +8,12 @@ public class ContactList {
 	/** 
     *This ArrayList will contain objects of class type Contact with Contact information
     */
-	private ArrayList<Contact> p;      // initials: M.S.
-/*      p.add("Enter a new person");
-	    p.add("Print the contact list");
-	    p.add("Retrieve a person's information by last name");
-	    p.add("Quit the program and save to disk");
-    	p.add("Start the program and open the existing data file on disk");
+	private ArrayList<Contact> p;      // initials: M.S., ediits by J.W.
+/*      p.add("Enter New person");
+	p.add("Print Contact List");  
+	p.add("Search By Last Name");
+	p.add("Quit");
+    	// Don't need this option, only 4 menu options initials J.W. >> p.add("Start the program and open the existing data file on disk");
 */			
 	
 	/**
@@ -54,26 +54,26 @@ public class ContactList {
 	/** 
 	*lets user input street address
 	*/
-	public void readStreetAddress() {      //initials: M.S.
-//		System.out.println("Enter street Address");
+	public void readStreetAddress() {      //initials: M.S., J.W. edit
+//		System.out.println("Enter street address");
 	}
 	/** 
     *lets user input email address
     */
-	public void readEmailAddress() {      //initials: M.S.
-//		System.out.println("Enter email Address");  
+	public void readEmailAddress() {      //initials: M.S., J.W. edit
+//		System.out.println("Enter email address");  
 	}
     /**
 	*lets user input phone number
 	*/
-	public void readPhoneNumber() {   //initials: M.S.
-//		System.out.println("Enter phone Number");
+	public void readPhoneNumber() {   //initials: M.S., J.W. edit
+//		System.out.println("Enter phone number");
 	}
 	/** 
 	*lets user input notes
 	*/
-	public void readEtcNotes() {    //initials: M.S.
-//		System.out.println("Enter Notes")    //initials J.W.
+	public void readEtcNotes() {    //initials: M.S., J.W. edit
+//		System.out.println("Enter notes")    
 	}
 	public String toString() { //need to define for loop to print Contact List //CP
 		return "<Contact List Print Test>";
