@@ -1,0 +1,87 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author Jenice test running adding 2 new contacts for use case 1
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ 
+    	/**
+         * Instantiates one new object
+         */
+        ContactList addressBook; //one object of this class represents the entire Contact List //CP
+        addressBook = new ContactList(); // creates an instance of the class ContactList.
+         
+        addressBook.userOptionAddPerson();      //method call to add contact, //initials: M.S. 
+        addressBook.userOptionPrintContactList(); //method prints contact list //initials: M.S.
+        addressBook.userOptionSearchByLastName(); //This method will search the ContactList for Contact by last name //initials: M.S.
+        addressBook.readContactInfo();  //method call to read contact info //initials: M.S.
+        addressBook.readFirstName();    //method call to read first name from class contact list //initials: M.S.
+        addressBook.readLastName();      //lets user input last name       //initials: M.S.
+        addressBook.readStreetAddress(); // lets user input street address     //initials: M.S.
+        addressBook.readEmailAddress();  // lets user input email Address   //initials: M.S.
+        addressBook.readPhoneNumber();   // lets user input phone number //initials: M.S.
+        addressBook.readNotes();      // lets user input Notes  //initials: J.W.
+        System.out.println(addressBook.toString()); // Prints Contact List //initials: C.P.
+         
+        /**
+         * Creates new object in class Contact that represents one Contact info 
+         * I think Elaine wants this object out  initias: J.W.
+         */
+        Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","NotesPerson1" ); 
+         
+        /**
+         * Get and Set methods are both related to how variables are passed between classes. The whole point of get() and set() is to receive the
+         * data and then store it. 
+         */
+        person.getFirstName(); // get method call to retrieve input of firstName from user
+        person.getLastName();  // get method call to retrieve input of lastName from user
+        person.getStreetAddress(); //get method call to retrieve input of streetAddssress from user
+        person.getEmailAddress(); // get method call to retrieve input of email address from user
+        person.getPhoneNumber(); //get method call to retrieve input of phone numbers from user
+        person.getNotes();    //get method call to retrieve input of Notes from user //initials J.W.
+         
+        person.setFirstName(); //set method call to store the FirstName variable
+        person.setLastName();  //set method call to store the LastName variable
+        person.setStreetAddress(); //set method call to store StreetAddress variable
+        person.setEmailAddress(); //set method call to store EmailAddress variable
+        person.setPhoneNumber(); //set method call to store PhoneNumber 
+        person.setNotes();    //set method call to store Notes //initials J.W.
+        
+        /**
+         * toString() represents a return String from person type Contact
+         */
+        System.out.println(person.toString()); // print Contact person info
+        
+        
+
+        TestContactList userOptions = new TestContactList(); 
+        /**
+     	 * This method prints the Menu (Options) selection [1] Enter New Person [2] Print Contact List [3] Search By Last Name [4] Quit //Initials J.W.
+     	 */
+        TestContactList.printMenu();    {  //call to printMenu method to display choice Options for user       //initials: M.S,C.P	 	 
+        }
+    }
+         
+     	private static void printMenu() {  //this method displays Menu Options Selections to user [1] Add contact [2] Print [3] Search By Last Name [4] Quit
+     		
+     	}
+    }
+
+		
+ 
+
+/************************************RUN COPY & PASTE******************************************************************
+<Contact List Print Test>
+ firstNamePerson1 lastNamePerson1  // I think the sytem would print these on different lines?
+ /**Should we use this in CLASS CONTACT instead? public String toString(){
+   */return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes);
+streetAddressPerson1
+emailPerson1
+phoneNumberPerson1
+NotesPerson1
+
+***********************************************************************************************************************/
