@@ -30,20 +30,12 @@ public class TestContactList {
         /**
          * Creates new object in class Contact that represents one Contact info 
          * I think Elaine wants this object out  initias: J.W. 
-	 * replay: I think she wants the object in TestContactList  //initials C.P.
-	 * out. I created the object userOptions in TestContactList inorder to add the printMenu() method to the class b/c syntax 
-	 * for calling method is objectName.method(); and since there is no object created in class TestContactList
-	 * see Class TestContactList line 59 for more comments. //intials:C.P.
-	 *
-	 * She mentioned that the way we set our parameters is used when "contact does not come from user" and  //intials:C.P
-	 * our Set() methods need to take a parameter for the new value of the private variable. 
-	 * So Im thinking to Delete parameters from constructor Contact(...) and adding parameters to set() methods,
-	 * which Mekhla included in the first draft. //initials:C.P 
+	 * -Delete parameters from constructor Contact(...) -Add parameters to set() methods //initials:C.P 
          */
         Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","NotesPerson1" ); 
          
-        /**
-         * Get and Set methods are both related to how variables are passed between classes. The whole point of get() and set() is to receive the
+	 /**
+	 *The whole point of get() and set() is to receive the
          * data and then store it. 
          */
         person.getFirstName(); // get method call to retrieve input of firstName from user
@@ -68,11 +60,9 @@ public class TestContactList {
         
 
 	/**
-	*Elain commented that we do NOT need to create an object in TestContactList.  //C.P. 
-	*The goal here was to call method printMenu() in the TestContactList.  
-	* Remove object userOptions. Keep printMenu() in TestContactList. Is there a different way of calling a method
-	*without adding the object name in the Syntax?  //C.P.
-	*/
+	 *Elain commented that we do NOT need to create an object in TestContactList.  //C.P.   
+	 * Remove object userOptions. Keep printMenu() in TestContactList. //C.P.
+	 */
         TestContactList userOptions = new TestContactList(); 
         /**
      	 * This method prints the Menu (Options) selection [1] Enter New Person [2] Print Contact List [3] Search By Last Name [4] Quit //Initials J.W.
@@ -92,11 +82,10 @@ public class TestContactList {
 /************************************RUN COPY & PASTE******************************************************************
 <Contact List Print Test>
  firstNamePerson1 lastNamePerson1  // I think the sytem would print these on different lines?intials:J.W.
- 				   // reply: we can add "\n" in between the two variables in the Return.initials: C.P.
+ 				  
  /**Should we use this in CLASS CONTACT instead? public String toString(){
   *return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes); //intials:J.W. 
-  *reply: Yes. and on a connected issue, we also have to figure out how to save or pass a single Contact and place it into
-  *an index of an Arraylist in Class ContactList. intials:C.P. 
+  *reply: Yes. C.P. 
   */
 streetAddressPerson1
 emailPerson1
