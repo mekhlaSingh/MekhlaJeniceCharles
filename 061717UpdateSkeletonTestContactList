@@ -29,15 +29,16 @@ public class TestContactList {
          
         /**
          * Creates new object in class Contact that represents one Contact info 
-         * I think Elaine wants this object out  initias: J.W. replay: I think she wants the object in TestContactList
+         * I think Elaine wants this object out  initias: J.W. 
+	 * replay: I think she wants the object in TestContactList  //initials C.P.
 	 * out. I created the object userOptions in TestContactList inorder to add the printMenu() method to the class b/c syntax 
 	 * for calling method is objectName.method(); and since there is no object created in class TestContactList
-	 * see Class TestContactList line 59 for more comments. intials:C.P.
+	 * see Class TestContactList line 59 for more comments. //intials:C.P.
 	 *
-	 * She mentioned that the way we set our parameters is used when "contact does not come from user" and 
+	 * She mentioned that the way we set our parameters is used when "contact does not come from user" and  //intials:C.P
 	 * our Set() methods need to take a parameter for the new value of the private variable. 
 	 * So Im thinking to Delete parameters from constructor Contact(...) and adding parameters to set() methods,
-	 * which Mekhla included in the first draft. initials:C.P 
+	 * which Mekhla included in the first draft. //initials:C.P 
          */
         Contact person = new Contact("firstNamePerson1", "lastNamePerson1","streetAddressPerson1","emailPerson1","phoneNumberPerson1","NotesPerson1" ); 
          
