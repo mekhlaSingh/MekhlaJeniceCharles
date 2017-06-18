@@ -30,7 +30,7 @@ public class Contact {
     /**
      * This method will retrieve firstName input from user
      */
-	public String getFirstName() {
+	public String readFirstName() {   //changed all of the 'get' s to 'read'
 		return this.firstName;
 	}
     /**
