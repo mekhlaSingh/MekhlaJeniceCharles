@@ -1,0 +1,147 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author Jenice test running adding 2 new contacts for use case 1
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+        /**
+     	 * This method prints the Menu (Options) selection [1] Enter New Person [2] Print Contact List [3] Search By Last Name [4] Quit //Initials J.W.
+     	 */
+         printMenu();      //call to printMenu method to display choice Options for user       //initials: M.S,C.P	 	 
+        
+    }
+    	/**
+         * Instantiates one new object
+         */
+        ContactList addressBook; {  //one object of this class represents the entire Contact List //CP
+        addressBook = new ContactList(); // creates an instance of the class ContactList.
+         
+        addressBook.userOptionAddPerson(null);      //method call to add contact, //initials: M.S. 
+        addressBook.userOptionPrintContactList(); //method prints contact list //initials: M.S.
+        addressBook.userOptionSearchByLastName(); //This method will search the ContactList for Contact by last name //initials: M.S.
+        addressBook.readContactInfo();  //method call to read contact info //initials: M.S.
+        addressBook.readFirstName();    //method call to read first name from class contact list //initials: M.S.
+        addressBook.readLastName();      //lets user input last name       //initials: M.S.
+        addressBook.readStreetAddress(); // lets user input street address     //initials: M.S.
+        addressBook.readEmailAddress();  // lets user input email Address   //initials: M.S.
+        addressBook.readPhoneNumber();   // lets user input phone number //initials: M.S.
+        addressBook.readNotes();      // lets user input Notes  //initials: J.W.
+        System.out.println(addressBook.toString()); // Prints Contact List //initials: C.P.
+         
+        /**
+         * Creates new object in class Contact that represents one Contact info 
+         * I think Elaine wants this object out  initias: J.W. 
+	 * replay: I think she wants the object in TestContactList  //initials C.P.
+	 * out. I created the object userOptions in TestContactList inorder to add the printMenu() method to the class b/c syntax 
+	 * for calling method is objectName.method(); and since there is no object created in class TestContactList
+	 * see Class TestContactList line 59 for more comments. //intials:C.P.
+	 * 
+     */
+ //   	ContactList addressBook = new ContactList();
+    	
+    	Contact person1 = getContact(); 
+ //  	addressBook.userOptionAddPerson(person1);
+    	
+    	
+    	System.out.println(person1);
+  //  	addressBook.add(person1);
+    	
+    	/**
+         * The whole point of get() and set() is to receive the
+         * data and then store it. 
+         */
+        person1.readFirstName(); //call to retrieve input of firstName from user
+        person1.readLastName();  //call to retrieve input of lastName from user
+        person1.readStreetAddress(); //call to retrieve input of streetAddssress from user
+        person1.readEmailAddress(); //call to retrieve input of email address from user
+        person1.readPhoneNumber(); //call to retrieve input of phone numbers from user
+        person1.readNotes();    // call to retrieve input of Notes from user //initials J.W.
+         
+        person1.setFirstName(""); //set method call to store the FirstName variable
+        person1.setLastName("");  //set method call to store the LastName variable
+        person1.setStreetAddress(""); //set method call to store StreetAddress variable
+        person1.setEmailAddress(""); //set method call to store EmailAddress variable
+        person1.setPhoneNumber(""); //set method call to store PhoneNumber 
+        person1.setNotes("");    //set method call to store Notes //initials J.W.
+    	
+    	Contact person2 = getContact(); 
+    	System.out.println(person2);
+  //  	addressBook.add(person2);
+    } 
+    public static Contact getContact() {  //prompts and reads data and creates new object and returns new Contact
+    	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;
+    	
+    	Scanner scanner = new Scanner(System.in);
+         
+	     System.out.println("Enter first name");
+	     firstName = scanner.nextLine();
+	     System.out.println("Enter last name");
+	     lastName = scanner.nextLine();
+	     System.out.println("Enter street Address");
+	     streetAddress = scanner.nextLine();
+	     System.out.println("Enter email Address");
+	     emailAddress = scanner.nextLine();
+	     System.out.println("Enter phone Number");
+	     phoneNumber = scanner.nextLine();
+	     System.out.println("Enter Notes");
+	     notes = scanner.nextLine();
+	     
+	     Contact person1 = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, notes);
+	     return person1;
+	     
+    }
+	     
+        
+//        
+        
+	     /**
+	         * The whole point of get() and set() is to receive the
+	         * data and then store it. 
+//	         */
+//	        person.readFirstName(); //call to retrieve input of firstName from user
+//	        person.readLastName();  //call to retrieve input of lastName from user
+//	        person.readStreetAddress(); //call to retrieve input of streetAddssress from user
+//	        person.readEmailAddress(); //call to retrieve input of email address from user
+//	        person.readPhoneNumber(); //call to retrieve input of phone numbers from user
+//	        person.readNotes();    // call to retrieve input of Notes from user //initials J.W.
+//	         
+//	        person.setFirstName(""); //set method call to store the FirstName variable
+//	        person.setLastName("");  //set method call to store the LastName variable
+//	        person.setStreetAddress(""); //set method call to store StreetAddress variable
+//	        person.setEmailAddress(""); //set method call to store EmailAddress variable
+//	        person.setPhoneNumber(""); //set method call to store PhoneNumber 
+//	        person.setNotes("");    //set method call to store Notes //initials J.W.
+        /**
+         * toString() represents a return String from person type Contact
+         */
+
+     
+     	private static void printMenu() {  //this method displays Menu Options Selections to user [1] Add contact [2] Print [3] Search By Last Name [4] Quit
+     		
+     	}
+}
+
+
+		
+ 
+
+/************************************RUN COPY & PASTE******************************************************************
+<Contact List Print Test>
+ firstNamePerson1 lastNamePerson1  // I think the sytem would print these on different lines?intials:J.W.
+ 				   // reply: we can add "\n" in between the two variables in the Return.initials: C.P.
+**Should we use this in CLASS CONTACT instead? public String toString(){
+  *return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes); //intials:J.W. 
+  *reply: Yes. and on a connected issue, we also have to figure out how to save or pass a single Contact and place it into
+  *an index of an Arraylist in Class ContactList. intials:C.P. 
+ 
+streetAddressPerson1
+emailPerson1
+phoneNumberPerson1
+NotesPerson1
+
+***********************************************************************************************************************/
+
