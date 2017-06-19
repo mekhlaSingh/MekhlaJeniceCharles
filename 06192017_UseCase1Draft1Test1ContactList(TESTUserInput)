@@ -1,0 +1,37 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+ //   	ContactList addressBook = new ContactList();
+    	
+    	Contact person1 = getContact(); 
+ //   	addressBook.userOptionAddPerson(person1);
+    	
+    	
+    	System.out.println(person1);
+  //  	addressBook.add(person1);
+    	
+    	Contact person2 = getContact(); 
+    	System.out.println(person2);
+  //  	addressBook.add(person2);
+    } 
+    public static Contact getContact() {
+    	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;
+         Scanner scanner = new Scanner(System.in);
+	     System.out.println("Enter first name");
+	     firstName = scanner.nextLine();
+	     System.out.println("Enter last name");
+	     lastName = scanner.nextLine();
+	     System.out.println("Enter street Address");
+	     streetAddress = scanner.nextLine();
+	     System.out.println("Enter email Address");
+	     emailAddress = scanner.nextLine();
+	     System.out.println("Enter phone Number");
+	     phoneNumber = scanner.nextLine();
+	     System.out.println("Enter  Notes");
+	     notes = scanner.nextLine();
+	     Contact person = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, notes);
+	     return person;
+    }	
+}
