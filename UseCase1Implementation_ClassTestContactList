@@ -1,0 +1,54 @@
+/*
+ * @author Jenice test running adding 2 new contacts for use case 1
+ *From Quality Sof:
+ *For this Task you will start by writing a main() program that will test your completed Use Case #1. This code, when it runs, 
+ *will do nothing but prove that your classes will be able to fulfill Use Case #1. Your test main() for Task 3 will have no menu, 
+ *no code that interacts with the disk. Your test main() for Task 3 will do ONLY the following 5 steps:
+ *1-declare a list of contacts
+ *2-add one contact to the list (getting input from the user)
+ *3-print the list to show that the contact got into the list
+ *4-add another contact to the list (getting input from the user)
+ *5-print the list to show that both contacts got into the list
+ */
+
+import java.util.Scanner;   //not using for usecase 1 I think.  J.W.
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+
+    	/**
+         * Instantiates one new object of class Contact List
+         */
+        ContactList addressBook; {  //one object of this class represents the entire Contact List //CP
+        addressBook = new ContactList(); // creates an instance of the class ContactList.
+        }
+      /**
+       * attempting 1-5 of 5 goals of Task 3. Still unclear if we're supposed to read from console or not so this may be wrong (J.W.)
+       */
+      Contact.printContact(); //Mehkla! calling to show list is empty but I think I did call wrong. do I say 'printAllContacts'? 'printList'?  J.W.   // initials J.W. 
+      addressBook.addContact("John", "Hopkins", "555 Alpha Lane, Palo Alto CA, 94301", "Smith.JS@aol.com", "(650)456-7890", "John has Wednesdays off.")
+      Contact.printContact(); //calling to show one contact printed
+      addressBook.addContact("Fred", "Smith", "123 Easy Street, Sunnyvale, CA, 94086", "F.Smith@gmail.com", "(408)555-6789", "Fred is out of the country the first week of every month.")
+      Contact.printContact(); //calling to show two contacts printed. Do I need an instance?
+      
+      //do we need these two for use case 1? J.W
+      addressBook.userOptionAddPerson();  //method call to add contact, //initials: M.S.  J.W edit to erase 'Null' as perameter
+      addressBook.userOptionPrintContactList(); //method prints contact list //initials: M.S.
+      
+       Contact person1 = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, notes);
+	     return person1;
+       
+	     }     
+      }
+
+ /**
+   * Helper methods outside main method to have user type info. initials J.W. 
+   * prompts and reads data and creates new object and returns new Contact  //Elaine helped write description 0619
+   */
+   public static Contact getContact() {  //Think we need to change 'getContact' to 'getUser' but I'm not sure initials J.W
+    	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;
+    	}  
+
+	     }     
+
