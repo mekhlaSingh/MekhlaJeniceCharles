@@ -1,0 +1,80 @@
+/**
+ * @author Jenice Implementation of Use Case 1 draft 1
+ */
+import java.io.*;
+/**
+ * One object of this class represents a single Contact.
+ */
+public class Contact { 
+	
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;   //initials M.S.,J.W. edit
+	 //adding a get method at bottom so this string can be accessed by main and return what is held in data members  //initials J.W.
+
+ /** 
+   *Default Constructor with an empty parameters   //initias J.W.
+   */
+	public Contact() {               // Assigned values to data members of default constructor. Previously empty. J.W.
+    firstName = "" ;   // Not sure if there should be a space in between quotes.  J.W.
+    lastName = "N/A" ; // Made unique to note no empty last name allowed rule.  J.W.
+    streetAddress = "" ;
+    emailAddress = "" ;
+  	phoneNumber = "" ;
+    notes = "" ;
+}     //Mekhla sorry but please double check my formatting and especially brackets. I hope I got them all correct.  J.W.
+ /**
+	 * Constructs a new Contact with String parameter
+	 */
+	public Contact(String firstName, String lastName, String streetAddress, String emailAddress, String phoneNumber, String notes) { 
+		this.firstName = firstName;
+		this.lastName = lastName;
+      if lastName       //need if loop for empty last name rule.    J.W.  ****************
+		this.streetAddress = streetAddress;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
+		this.notes = notes;    //initials J.W. edit
+	}
+
+    /**
+     * This get method will allow the main to access firstName data member in private string in class contact (this class).  J.W.
+    */  
+	public String getFirstName() {  
+		return this.firstName;
+	}
+   	/**
+	 * This method will allow the main to access lastName data member in private string in class contact (this class).  J.W.
+	 */
+	public String getLastName() {
+		return this.lastName;
+	} 
+    /**
+     * This method will allow the main to access streetAddress data member in private string in class contact (this class).  J.W.
+     */
+	public String getStreetAddress() {
+		return this.streetAddress;
+	} 
+   /**
+     * This method will allow the main to access emailAddress data member in private string in class contact (this class).  J.W.
+     */
+	public String getEmailAddress() {
+		return emailAddress;
+	} 
+   /**
+     * This method will allow the main to access phoneNumber data member in private string in class contact (this class).  J.W.
+     */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}  
+   /**
+     * This method will allow the main to access notes data member in private string in class contact (this class).  J.W.
+     */
+	public String getNotes() {
+		return notes;   // initials: J.W. edit
+	}
+      
+	/**
+	 * This method returns String with users variables input
+	 */
+	public String toString(){
+		return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes);
+	}
+}
