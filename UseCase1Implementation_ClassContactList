@@ -1,0 +1,43 @@
+import java.util.ArrayList;    //initials: M.S.
+
+//importing Contact class to Contact class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ */
+public class ContactList { 
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> allContacts;      // initials: M.S.
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson(Contact newContact) {                //initials: M.S.
+	}
+  
+  /**
+   *This method creates an object of Contact class and adds that to allContacts  // initials J.W.
+   */
+  public void addContact (Contact temp)    //  This may do the same thing as above in userOptionAddPerson  initials J.W.
+        addressBook.readContactInfo();  //method call to read contact info //initials: M.S.
+        addressBook.readFirstName();    //method call to read first name from class contact list //initials: M.S.
+        addressBook.readLastName();      //lets user input last name       //initials: M.S.
+        addressBook.readStreetAddress(); // lets user input street address     //initials: M.S.
+        addressBook.readEmailAddress();  // lets user input email Address   //initials: M.S.
+        addressBook.readPhoneNumber();   // lets user input phone number //initials: M.S.
+        addressBook.readNotes();      // lets user input Notes  //initials: J.W.
+	
+  /**
+	 *  This method goes thru the list and calls toString for each contact while creating a jumbo string.  J.W.
+	 * Also: this method returns a string representation of Class ContactList //CP
+	 */
+	public String toString() { 
+		String myString = "";
+	}
+/**
+ *This method prints a header for contact list when prompted, especially for user to see list is blank. J.W
+ */
+public void printContact {
+System.out.println("List of Contacts");
+}
+}
