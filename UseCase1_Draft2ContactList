@@ -1,0 +1,81 @@
+
+
+import java.util.ArrayList;    //initials: M.S.
+
+//importing Contact class to Contact class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ */
+public class ContactList { 
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> allContacts;    //initials: M.S.
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson(Contact newContact) {   //initials: M.S.
+		allContacts.add(newContact);
+	}
+	/**
+	 *  This method prints the contact list
+	 */
+	public void userOptionPrintContactList() {  //initials: M.S.
+
+	}
+	/**
+	 * This method will search the ContactList for Contact by last name
+	 */
+	public void userOptionSearchByLastName() {    //initials: M.S.
+//		System.out.println("Enter last name");
+	}
+	/**
+	 * //this method creates a new object of class Contact, gets the data from user  and stores the contact into the list.
+	 */
+	public void readContactInfo() { 
+	}
+	/**
+	 *  lets user input first name
+	 */
+	public void readFirstName() {     //initials: M.S.
+         return;
+		//		System.out.println("Enter first name");
+	}
+	/** 
+	* lets user input last name
+	*/
+	public void readLastName() {   	//initials: M.S.
+//		System.out.println("Enter last name");
+	}
+	/** 
+	*lets user input street address
+	*/
+	public void readStreetAddress() {      //initials: M.S.
+//		System.out.println("Enter street Address");
+	}
+	/** 
+    *lets user input email address
+    */
+	public void readEmailAddress() {      //initials: M.S.
+//		System.out.println("Enter email Address");  
+	}
+    /**
+	*lets user input phone number
+	*/
+	public void readPhoneNumber() {   //initials: M.S.
+//		System.out.println("Enter phone Number");
+	}
+	/** 
+	*lets user input notes
+	*/
+	public void readNotes() {    //initials: M.S.
+//		System.out.println("Enter etc Notes")
+	}
+	/**
+	 * this method returns a string representation of Class ContactList //CP
+	 */
+	public String toString() { 
+			return allContacts.toString();
+	}
+}
+
