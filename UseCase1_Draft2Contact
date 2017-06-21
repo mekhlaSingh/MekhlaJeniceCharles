@@ -1,0 +1,132 @@
+/**
+ * @author Jenice Implementation of Use Case 1 draft 1
+ */
+import java.io.*;
+/**
+ * One object of this class represents a single Contact.
+ */
+public class Contact { //add implements Serializable { 
+	
+	
+	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;   //initials M.S.,J.W. edit
+	
+	/*
+	 * Constructs a new Contact with String parameter
+	 */
+	public Contact(String firstName,String lastName, String streetAddress, String emailAddress,String phoneNumber,String notes) { 
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.streetAddress = streetAddress;
+		this.emailAddress = emailAddress;
+		this.phoneNumber = phoneNumber;
+		this.notes = notes;    //initials J.W. edit
+	}
+/**
+   Constructs a new Contact with an empty parameter
+
+	public Contact() {
+*/
+	//}
+    /**
+     * This method will retrieve firstName input from user
+     */
+	public String readFirstName() {   //changed all of the 'get' s to 'read'
+		return this.firstName;
+	}
+    /**
+     * This method will set firstName based on input from user
+     */
+	public void setFirstName(String firstName) {  
+/*		if (firstName.isEmpty()) {
+			this.firstName = "N/A";
+		} else {
+*/		
+//           this.firstName = firstName;
+		}
+
+	/**
+	 * This method will retrieve lastName input from user
+	 */
+	public String readLastName() {
+		return this.lastName;
+	}
+    /**
+     * This method will store lastName based on input from user
+     */
+	public void setLastName(String lastName) { 
+//		this.lastName = lastName;
+	}
+    /**
+     * This method will retrieve streetAddress input from user
+     */
+	public String readStreetAddress() {
+		return this.streetAddress;
+	}
+    /**
+     * This method will store streetAddress based on input from user
+     */
+	public void setStreetAddress(String streetAddress) { 
+/*		if (streetAddress.isEmpty()) {
+			this.streetAddress = "N/A";
+		} else {
+			this.streetAddress = streetAddress;
+*/
+		}
+    /**
+     * This method will retrieve readEmailAddress input from user
+     */
+	public String readEmailAddress() {
+		return emailAddress;
+	}
+    /**
+     * This method will store emailAddress input from user  
+     */
+	public void setEmailAddress(String emailAddress) {  
+/*		if (emailAddress.isEmpty()) {
+			this.emailAddress = "N/A";
+		} else {
+			this.emailAddress = emailAddress;
+		}
+*/
+	}
+    /**
+     * This method will retrieve phoneNumber input from user
+     */
+	public String readPhoneNumber() {
+		return phoneNumber;
+	}
+    /** 
+     * This method will set phoneNumber based on input from user
+     */
+	public void setPhoneNumber(String phoneNumbers) { 
+/*		if (phoneNumber.isEmpty()) {
+			this.phoneNumber = "N/A";
+		} else {
+			this.phoneNumber = phoneNumber;
+		}
+*/		
+	}
+    /**
+     * This method will retrieve Notes input from user
+     */
+	public String readNotes() {
+		return notes;   // initials: J.W. edit
+	}
+    /**
+     * This method will set notes based on input from user
+     */
+	public void setNotes(String notes) { 
+/*		if (notes.isEmpty()) {
+			this.notes = "N/A";
+		} else {
+			this.notes = notes;  //initials J.W. edit
+		}
+*/
+	}
+	/**
+	 * This method returns String with users variables input
+	 */
+	public String toString(){
+		return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes);
+	}
+}
