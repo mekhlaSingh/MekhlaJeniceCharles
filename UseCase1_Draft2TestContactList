@@ -1,0 +1,49 @@
+/* This program creates and stores a Contact List.
+ *
+ * @author Jenice test running adding 2 new contacts for use case 1
+ */
+
+import java.util.Scanner;
+import java.util.ArrayList;
+ 
+public class TestContactList {
+    public static void main(String [] args) {
+         
+    /**
+     * Creates new object in class Contact that represents one Contact info 
+     */	
+    ContactList addressBook;	
+    	addressBook = new ContactList();
+   
+	Contact person1 = getContact(); //What is this method doing? Is it Creating an object Person 1? NO b/c no new 
+									//Is it calling a method? 
+	addressBook.userOptionAddPerson(person1);  
+	//print addressBook
+	
+    }	
+public static Contact getContact() {  //prompts and reads data and creates new object and returns new Contact //C.P.
+	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes; //M.S.
+	Scanner scanner = new Scanner(System.in);  //M.S.
+    System.out.println("Enter first name");
+    firstName = scanner.nextLine();
+    System.out.println("Enter last name");
+    lastName = scanner.nextLine();
+    System.out.println("Enter street Address");
+    streetAddress = scanner.nextLine();
+    System.out.println("Enter email Address");
+    emailAddress = scanner.nextLine();
+    System.out.println("Enter phone Number");
+    phoneNumber = scanner.nextLine();
+    System.out.println("Enter Notes");
+    notes = scanner.nextLine();
+     
+    Contact person1 = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, notes);  //C.P.
+        
+	return person1; 
+	//define toString and call array list to print all contacts //C.P.     	
+}     
+     	}
+/************************************RUN COPY & PASTE******************************************************************
+
+***********************************************************************************************************************/
+
