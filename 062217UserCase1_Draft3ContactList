@@ -1,0 +1,45 @@
+
+
+import java.util.ArrayList;    //initials: M.S.
+
+//importing Contact class to Contact class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ */
+public class ContactList { 
+	
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> allContacts;      // initials: M.S.
+	public ContactList() {
+	  allContacts = new ArrayList<Contact>();             // initials: C.P.
+	}
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson(Contact newContact) {                //initials: M.S.
+		 allContacts.add(newContact);                                    //group #4
+		 System.out.println("ArrayList size is " + allContacts.size());  
+	}
+	
+  /**
+	 *  This method goes thru the list and calls toString for each contact while creating a jumbo string.  J.W.
+	 * Also: this method returns a string representation of Class ContactList //CP
+	 */
+	@Override
+	public String toString() { 
+		String myString = "";
+		for (int i = 0; i < allContacts.size(); i++) {
+			myString = myString + allContacts.get(i) + "\n";
+		}
+		return myString;                                          //C.P.
+}
+/**
+ *This method prints a header for contact list when prompted, especially for user to see list is blank. J.W
+ */
+//public void printContact {
+//System.out.println("List of Contacts");
+
+   }
+
