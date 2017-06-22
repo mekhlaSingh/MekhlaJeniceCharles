@@ -15,8 +15,8 @@ public class TestContactList {
     ContactList addressBook;	
     	addressBook = new ContactList();
    
-	Contact person1 = getContact(); //What is this method doing? Is it Creating an object Person 1? NO b/c no new 
-									//Is it calling a method? 
+	Contact person1 = getContact(); 
+	
 	addressBook.userOptionAddPerson(person1);  
 	//print addressBook
 	
