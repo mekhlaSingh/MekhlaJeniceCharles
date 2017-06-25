@@ -5,8 +5,8 @@ import java.io.*;
 /**
  * One object of this class represents a single Contact.
  */
-public class Contact { //add implements Serializable { 
-	
+public class Contact { //Implement Comparable and include compareTo() method in class Contact
+ { 
 	
 	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;   //initials M.S.,J.W. edit
 	
@@ -28,7 +28,8 @@ public class Contact { //add implements Serializable {
 */
 	//}
     /**
-     * This method will retrieve firstName input from user
+     * When will we call these read methods???
+     *This method will retrieve firstName input from user
      */
 	public String readFirstName() {   //changed all of the 'get' s to 'read'
 		return this.firstName;
