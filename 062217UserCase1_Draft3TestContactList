@@ -15,18 +15,18 @@ public class TestContactList {
     ContactList addressBook;	
     	addressBook = new ContactList();
    
-	Contact person1 = getContact(); 
+	Contact person1 = readContact(); 
 	
 	addressBook.userOptionAddPerson(person1);  
 	//print addressBook
 	
 	System.out.println(addressBook);
-	person1 = getContact(); 
+	person1 = readContact(); 
 	
 	addressBook.userOptionAddPerson(person1);  
 	System.out.println(addressBook);
     }	
-public static Contact getContact() {  //prompts and reads data and creates new object and returns new Contact //C.P.
+public static Contact readContact() {  //prompts and reads data and creates new object and returns new Contact //C.P.
 	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes; //M.S.
 	Scanner scanner = new Scanner(System.in);  //M.S.
     System.out.println("Enter first name");
