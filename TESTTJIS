@@ -1,0 +1,38 @@
+public class Contact {
+
+	private int name1;
+private int name2;
+	public int compareTo(Contact other) {
+		
+	String name1;
+	String name2;
+	if (this.name1 > other.name2 ){
+		return 99;	
+	}
+	return 0;
+		
+    }
+}
+
+
+and 
+
+
+
+
+public class TestContactList {
+
+	public static void main (String []args){
+		
+	
+	
+	String name1 = "Mickey";
+	
+	String name2 = "Minnie";
+	System.out.println(name1.compareTo(name2));
+	System.out.println(name2.compareTo(name1));
+	System.out.println(name1.compareTo(name1 ));
+	
+	
+}
+}
