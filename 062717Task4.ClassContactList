@@ -1,0 +1,82 @@
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;    //initials: M.S.
+
+//importing Contact class to Contact class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ * Sorting method
+ */
+
+public class ContactList { 
+		
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> allContacts;      // initials: M.S.
+	
+	public ContactList() {
+	  allContacts = new ArrayList<Contact>();             // initials: C.P.
+	}
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson(Contact newContact) {                //initials: M.S.
+		 allContacts.add(newContact);                                    //group #4
+		 System.out.println("\n" + "ArrayList size is " + allContacts.size());  // prints size of ArrayList C.P.
+	}
+	public void writeFile() {
+		FileOutputStream outFile;
+	    ObjectOutputStream outObject; 
+	    try  {
+	       outFile = new FileOutputStream ("ContactListdata");     
+	       outObject = new ObjectOutputStream(outFile);
+	       outObject.writeObject(allContacts);
+	       outFile.close();
+	       outObject.close();     
+	    } catch (IOException ioe)  {
+	       System.out.println ("Error writing objects to the file: "+ ioe.getMessage());
+	    }
+	}
+	public void readFile() {
+		 // 3) Read the 2 Contact objects back in from the file  
+	    FileInputStream inFile;
+	    ObjectInputStream inObject;
+
+	    try  {
+	       inFile = new FileInputStream("ContactListData");     
+	       inObject = new ObjectInputStream(inFile);
+	       allContacts = (ArrayList<Contact>)inObject.readObject();
+	       inFile.close();
+	       inObject.close();     
+	    } catch(IOException ioe)  {
+	       System.out.println ("Error reading from the file: " + ioe.getMessage());
+	    } catch (ClassNotFoundException cnfe)  {
+	       System.out.println ("Error in casting to ArrayList<Contact>: " + cnfe);
+	    }  			
+	}
+  /**
+	 *  This method goes thru the list and calls toString for each contact while creating a jumbo string.  J.W.
+	 * Also: this method returns a string representation of Class ContactList //CP
+	 */
+	@Override
+	public String toString() { 
+		String myString = "";
+		for (int i = 0; i < allContacts.size(); i++) {
+			myString = myString + allContacts.get(i) + "\n" + "\n";
+		}
+		return myString;                                          //C.P.
+}
+/**
+ *This method prints a header for contact list when prompted, especially for user to see list is blank. J.W
+ */
+//public void printContact {
+//System.out.println("List of Contacts");
+
+   }
+
