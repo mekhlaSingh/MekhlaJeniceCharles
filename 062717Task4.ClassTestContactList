@@ -6,12 +6,11 @@
 import java.io.*;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collections;
  
 public class TestContactList {
-	    ContactList addressBook;  
 	
 	public static void main(String [] args) throws IOException {
-   	
     /**
      * Creates new object in class ContactList that represents entire ContactList 
      */	
@@ -20,26 +19,19 @@ public class TestContactList {
     /**
      * Object person is referenced to getContact() method	
      */
-   for (int cnt=0; cnt<1; cnt++) { 	
+    for (int cnt=0; cnt<3; cnt++) { 	
 	Contact person = readContact(); 	
 	/**
 	 * Adds Contact person to ContactList
 	 */
 	addressBook.userOptionAddPerson(person); 
-//	fileManager = new ContactListRepository (person);	
 	/**
 	 * Calls toString() implicitly to print Entire ContactList thus far to console
 	 */
-	System.out.println(addressBook);	
-	// 1) Write the 2 objects to the file
-    
+	System.out.println(addressBook);
                     
-    // 4) Print the 2 Contacts objects to see if they were read in correctly
-    System.out.println (person);
     }
 }
-  
-
 public static Contact readContact() {  //prompts and reads data and creates new object and returns new Contact //C.P.
 	String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes; //M.S.
 	Scanner scanner = new Scanner(System.in);  //M.S.
@@ -57,7 +49,7 @@ public static Contact readContact() {  //prompts and reads data and creates new 
     notes = scanner.nextLine();
      
     Contact person = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, notes);  //C.P.
-        
+    
 	return person; 
 	  	
 }     
