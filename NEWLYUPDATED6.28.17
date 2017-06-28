@@ -1,0 +1,166 @@
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;    //initials: M.S.
+import java.util.Scanner;
+
+
+
+
+//importing Contact class to Contact class
+/**
+ * one object of this class represents the entire contact list with all the contacts.  
+ * Sorting method
+ */
+
+public class ContactList { 
+		
+	private static final ArrayList<Contact> c = null;
+	/** 
+    *This ArrayList will contain objects of class type Contact with Contact information
+    */
+	private ArrayList<Contact> allContacts;      // initials: M.S.
+	public void printMenu() {
+		String firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes;
+		firstName = null;
+		lastName = null;
+		streetAddress = null;
+		emailAddress = null;
+		phoneNumber = null;
+		etcNotes = null;
+		Scanner scanner = new Scanner(System.in);
+		int i = 0; 
+
+		allContacts = new ArrayList<Contact>(); 
+		do {
+	         System.out.print("(1.) Enter New Person\n(2.) Print Contact List\n(3.) Search By Last Name\n(4.)Save and Quit\n(5.) Start Program and open existing contact info");
+	         i = Integer.parseInt(scanner.nextLine());
+	         if (i == 0){
+	        	 System.out.println("Please enter a selection");
+	         }
+	         if ( i ==1){
+	        	 Contact contact = new Contact(firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes);
+	        	 System.out.println("Enter first name");
+					firstName = scanner.nextLine();
+					System.out.println("Enter last name");
+			
+					lastName = scanner.nextLine();
+					
+					System.out.println("Enter street Address");
+					streetAddress = scanner.nextLine();
+					System.out.println("Enter email Address");
+					emailAddress = scanner.nextLine();
+					System.out.println("Enter phone Number");
+					phoneNumber = scanner.nextLine();
+					System.out.println("Enter etc Notes");
+					etcNotes = scanner.nextLine(); 
+	         if (lastName.isEmpty()){
+	        	 System.out.println("Cannot Enter Into Contact List Without Last Name");	 
+	         } else {
+	        	 contact.setValuesForPerson(firstName, lastName, streetAddress, emailAddress, phoneNumber, etcNotes);
+					allContacts.add(contact); 
+					System.out.println("Info Added");
+	         }
+	         
+	         }
+	         if (i==2){
+	        	 for (Contact c : allContacts){
+	        		 System.out.println(c.toString());
+	        		 
+	        	 }
+	         }
+	         
+	         if (i==3){
+	        	 int sizeCheck =0;
+	        	 String lastNameCheck; 
+	        	 System.out.println("Enter last name");
+	        	 lastNameCheck = scanner.nextLine();
+	   
+	        	 
+	        	 for (Contact c: allContacts){
+	        		 if (c.readLastName().equalsIgnoreCase(lastNameCheck)){
+							System.out.println(c.toString());
+						} else{
+							sizeCheck++;	
+						}
+	        	 }
+	        	 
+				if(sizeCheck == allContacts.size()){
+						System.out.println("Person was unable to be found");
+					}
+	         
+	         }
+	         if (i == 4){
+	        	 System.exit(0);
+	        	 //be able to quit and save? all this does is quit
+	         }
+	         if ( i == 5){
+	        	 //need to fix this, be able to restart and save
+	        	System.exit(1);
+	         }
+	      }while( i != 6 );
+	}
+		
+
+	public ContactList() {
+	  allContacts = new ArrayList<Contact>();             // initials: C.P.
+	}
+	/**
+	 *  This method adds a new contact to ContactList 
+	 */
+	public void userOptionAddPerson(Contact newContact) {                //initials: M.S.
+		 allContacts.add(newContact);                                    //group #4
+		 System.out.println("\n" + "ArrayList size is " + allContacts.size());  // prints size of ArrayList C.P.
+	}
+	public void writeFile(ArrayList<Contact> x) {
+		FileOutputStream outFile;
+	    ObjectOutputStream outObject; 
+	    try  {
+	       outFile = new FileOutputStream ("ContactListdata");     
+	       outObject = new ObjectOutputStream(outFile);
+	       outObject.writeObject(x);
+	       outFile.close();
+	       outObject.close();     
+	    } catch (IOException ioe)  {
+	       System.out.println ("Error writing objects to the file: "+ ioe.getMessage());
+	    }
+	}
+	public void readFile() {
+		 // 3) Read the 2 Contact objects back in from the file  
+	    FileInputStream inFile;
+	    ObjectInputStream inObject;
+
+	    try  {
+	       inFile = new FileInputStream("ContactListData");     
+	       inObject = new ObjectInputStream(inFile);
+	       allContacts = (ArrayList<Contact>)inObject.readObject();
+	       inFile.close();
+	       inObject.close();     
+	    } catch(IOException ioe)  {
+	       System.out.println ("Error reading from the file: " + ioe.getMessage());
+	    } catch (ClassNotFoundException cnfe)  {
+	       System.out.println ("Error in casting to ArrayList<Contact>: " + cnfe);
+	    }  			
+	}
+  /**
+	 *  This method goes thru the list and calls toString for each contact while creating a jumbo string.  J.W.
+	 * Also: this method returns a string representation of Class ContactList //CP
+	 */
+	@Override
+	public String toString() { 
+		String myString = "";
+		for (int i = 0; i < allContacts.size(); i++) {
+			myString = myString + allContacts.get(i) + "\n" + "\n";
+		}
+		return myString;                                          //C.P.
+}
+/**
+ *This method prints a header for contact list when prompted, especially for user to see list is blank. J.W
+ */
+//public void printContact {
+//System.out.println("List of Contacts");
+
+   }
