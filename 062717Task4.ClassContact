@@ -1,11 +1,11 @@
-/**
- * @author Jenice Implementation of Use Case 1 draft 1
+/*
+* @author Jenice Implementation of Use Case 1 draft 1
  */
 import java.io.*;
 import java.util.Scanner;
 /**compareTo();Is Search and Comparable the same?
  */
-public class Contact{ 
+public class Contact implements Comparable <Contact>{ 
 	
 	
 	private String firstName, lastName, streetAddress, emailAddress, phoneNumber, notes;   //initials M.S.,J.W. edit
@@ -20,6 +20,20 @@ public class Contact{
 		this.emailAddress = emailAddress;
 		this.phoneNumber = phoneNumber;
 		this.notes = notes;    //initials J.W. edit
+	}
+	/** 
+	 * This method will sort ArrayList of objects by lastName
+	 */
+	@Override 
+	public int compareTo(Contact other) {
+		int comparelastNameInt = this.lastName.compareTo(other.lastName);
+		if(comparelastNameInt > 0) {
+			return 1;
+		}
+		if(comparelastNameInt < 0) {
+			return -1;
+		}
+		return 0;
 	}
     /**
      * This method will retrieve firstName input from user
@@ -124,9 +138,7 @@ public class Contact{
 	public String toString(){
 		return (firstName + "\n" + lastName + "\n" + streetAddress + "\n" + emailAddress + "\n" + phoneNumber + "\n" + notes);
 	}
-//	public Contact compareTo() {
-
-	}
+}
 
 
 
