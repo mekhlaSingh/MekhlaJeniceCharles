@@ -6,6 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;    //initials: M.S.
+import java.util.Collections;
 
 //importing Contact class to Contact class
 /**
@@ -28,8 +29,18 @@ public class ContactList {
 	 */
 	public void userOptionAddPerson(Contact newContact) {                //initials: M.S.
 		 allContacts.add(newContact);                                    //group #4
-		 System.out.println("\n" + "ArrayList size is " + allContacts.size());  // prints size of ArrayList C.P.
+		 System.out.println("\n" + "Total number of Contacts is " + allContacts.size());  // prints size of ArrayList C.P.
+	/**
+	 * This method will sort allContacts by lastName. 
+	 */
+	Collections.sort(allContacts);
+	for (int i = 0; i < allContacts.size(); i++) {
+//		System.out.println(allContacts.get(i) + "\n");
 	}
+	}			
+	/**
+	 *  This method will write the ArrayList object to file "ContactListData"
+	 */
 	public void writeFile() {
 		FileOutputStream outFile;
 	    ObjectOutputStream outObject; 
@@ -43,6 +54,9 @@ public class ContactList {
 	       System.out.println ("Error writing objects to the file: "+ ioe.getMessage());
 	    }
 	}
+	/**
+	 * This method will read the ArrayList object from file "ContactListData"
+	 */
 	public void readFile() {
 		 // 3) Read the 2 Contact objects back in from the file  
 	    FileInputStream inFile;
@@ -62,7 +76,7 @@ public class ContactList {
 	}
   /**
 	 *  This method goes thru the list and calls toString for each contact while creating a jumbo string.  J.W.
-	 * Also: this method returns a string representation of Class ContactList //CP
+	 * Also: this method returns a string representation of Class ContactList unsorted //CP
 	 */
 	@Override
 	public String toString() { 
@@ -71,6 +85,7 @@ public class ContactList {
 			myString = myString + allContacts.get(i) + "\n" + "\n";
 		}
 		return myString;                                          //C.P.
+
 }
 /**
  *This method prints a header for contact list when prompted, especially for user to see list is blank. J.W
